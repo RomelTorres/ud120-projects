@@ -1,4 +1,4 @@
 ud120-projects
 ==============
 
-Starter project code for students taking Udacity ud120
+This repository tackles the problems of the Machine Learning class taught by Udacity.
