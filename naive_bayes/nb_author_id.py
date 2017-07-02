@@ -16,9 +16,6 @@ from email_preprocess import preprocess
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 
-### features_train and features_test are the features for the training
-### and testing datasets, respectively
-### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 # Initialize the Gaussian Naive Bayes class
 gnb = GaussianNB()
@@ -31,6 +28,6 @@ t0_predicting = time()
 predictions = gnb.predict(features_test)
 t1_predicting = time()
 # Calculate the accuracy of the model.
-accuracy = accuracy_score(predictions, labels_test)
+accuracy = accuracy_score(labels_test, predictions)
 print("Trainning time {}s  with an accuracy of: {}%".format(round(t1-t0),accuracy*100))
 print("Predicting is about {} times faster than trainning".format(round(t1-t0)/round(t1_predicting, t0_predicting)))
